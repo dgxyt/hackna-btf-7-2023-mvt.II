@@ -1,0 +1,98 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sign Up for Pittsburgh Help Desk</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="fav.ico">
+  <style>
+  body { /*disabled*/
+      color: #fff;
+      background-color: #222;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    body.dark-mode {
+      color: #333;
+      background-color: #f1f1f1;
+    }
+
+    .toggle-mode {
+      background-color: transparent;
+      position:absolute;
+      top:0; 
+      right:0;
+      border: none;
+      cursor: pointer;
+      font-size: 24px;
+      
+    }
+  </style>
+</head>
+
+<body><button class="button" id="oButtonBack" type="button">Back</button>
+  <!--
+<form action="/action_page.php" 
+    <label for="fname">First name:</label>
+    <input type="text" id="fname" name="fname"><br><br>
+    <label for="lname">Last name:</label>
+    <input type="text" id="lname" name="lname"><br><br>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="birthday">Birthday:</label>
+    <input type="date" id="birthday" name="birthday"><br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+-->
+   <button class="toggle-mode" onclick="toggleDarkMode()">&#9788;</button>
+
+  <script>
+    function toggleDarkMode() {
+      var body = document.querySelector('body');
+      body.classList.toggle('dark-mode');
+
+      // Save preference using cookies
+      var isDarkMode = body.classList.contains('dark-mode');
+      setCookie('dark-mode-preference', isDarkMode.toString(), 365);
+    }
+
+    // Function to set a cookie
+    function setCookie(name, value, days) {
+      var expires = '';
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toUTCString();
+      }
+      document.cookie = name + '=' + (value || '') + expires + '; path=/';
+    }
+
+    // Function to get the value of a cookie
+    function getCookie(name) {
+      var nameEQ = name + '=';
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        while (cookie.charAt(0) === ' ') {
+          cookie = cookie.substring(1, cookie.length);
+        }
+        if (cookie.indexOf(nameEQ) === 0) {
+          return cookie.substring(nameEQ.length, cookie.length);
+        }
+      }
+      return null;
+    }
+
+    // Check for user's preference on page load
+    var darkModePreference = getCookie('dark-mode-preference');
+    if (darkModePreference === 'true') {
+      document.querySelector('body').classList.add('dark-mode');
+    }
+  </script>
+  Accounts have been canceled until further notice. Use names or something. Go back.
+  <script src="signup.js"></script>
+</body>
+
+</html>

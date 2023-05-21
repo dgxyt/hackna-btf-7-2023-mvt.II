@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Pittsburgh Help Desk</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" type="image/x-icon" href="fav.ico"> 
+  <style>
+  body {
+      color: #fff; /*disabled*/
+      background-colosr: #222;
+      transition: color 0.3s ease, background-color 0.3s ease;
+    }
+
+    body.dark-mode {
+      color: #333;
+      background-color: #f1f1f1;
+    }
+
+    .toggle-mode {
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 36px;
+      position:absolute; top:0; right:0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <button class="toggle-mode" onclick="toggleDarkMode()">&#9788;</button>
+
+  <script>
+    function toggleDarkMode() {
+      var body = document.querySelector('body');
+      body.classList.toggle('dark-mode');
+
+
+  </script>
+  <!--<button class="button" id="oButtonSignUp" type="button">Sign Up</button>-->
+
+  <!--<div class="title">--><h1>Pittsburgh Help Desk</h1></div><br>
+  <!--<div class="help-desk">--><p>
+  <div align="center">
+    <span class="typing-text">Welcome to the Pittsburgh Help Desk! Ask and answer questions!
+    </p></span></div>
+  <div align="center">
+    <br><br><button id="oButtonAsk" type="button" class="button">Ask</button><br>
+    <br><button id="oButtonAnswer" type="button" class="button">Answer</button><br><br><img src="fav.ico" alt="" width="16px">
+  </div>
+  <script src="script.js"></script>
+  <br>
+  <p>
+
+
+
+  </p>
+  <!--
+  plans:
+  brian pls fix the pittsburgh help desk font (wait wdym)
+  Im collecting imgs 
+  i will insert them when im done
+  nice job brian
+  
+so we gonna do homescreen and then buttons yes babe
+  --
+  main page (buttons)
+  help desk: upload questions and answers; can submit to catagoriess
+
+  upload to github
+
+  NOTE: we may want to reconsider the online interaction with others, i did some reasearch and it seems very difficult unless you know how to due it
+  -->
+
+</body>
+
+</html>
